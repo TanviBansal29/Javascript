@@ -5,10 +5,12 @@
 </head>
 
 <body>
-    <div id="output">Rock Paper Scissors Game</div>
+    <div id="output">Player vs Computer</div>
     <script>
 
+        var output = document.getElementById("output");
         var player = prompt("Do you choose Rock or Scissors?");
+        var ps = player.charAt(0).toUpperCase();
         var win = false;
         var computer = Math.random();
         if (computer < 0.34) {
@@ -20,7 +22,37 @@
         else {
             computer = "Scissors";
         }
+        var cs = computer.charAt(0).toUpperCase();
         console.log(computer);
+        var html = "";
+
+        if (cs == ps) {
+            html += "It is a tie";
+        }
+        else {
+            if (ps == "R") {
+                if (cs == "S") {
+                    win = true;
+                }
+            }
+            else if (ps == "P") {
+                if (cs == "R") {
+                    win = true;
+                }
+            }
+            else {
+                if (cs == "P") {
+                    win = true;
+                }
+            }
+            if (win) {
+                html += "Player Wins";
+            } else {
+                html += "Computer wins"
+            }
+        }
+        output.innerHTML = "Player vs Computer<br>" + player + "vs" + computer + "<br>Result: " + html;
+
 
     </script>
 </body>
