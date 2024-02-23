@@ -8,20 +8,39 @@
 <body>
     <div id="output"></div>
     <script>
-        var output = document.getElementById("output");
-        myFunction();
-        myFunction();
+        // var output = document.getElementById("output");
+        // myFunction();
+        // myFunction();
 
-        function myFunction() {
-            alert("hello");
-            alert("hey");
+        // function myFunction() {
+        //     alert("hello");
+        //     alert("hey");
+        // }
+
+        // output.innerHTML = myFunction1()
+        // function myFunction1() {
+        //     return "okayyyy"
+        // }
+
+
+        //no arguments in functions
+
+        output = document.getElementById("output");
+
+        var a = myFun();
+
+        // function myFun(para) {
+        //     if (typeof para === "undefined") {
+        //         para = "Hello World";
+        //     }
+        //     output.innerHTML += para;
+        //     return a   //undefined 
+        // }
+        // console.log(a);
+
+        function myFun(para = "Hello User") {
+            output.innerHTML += para;
         }
-
-        output.innerHTML = myFunction1()
-        function myFunction1() {
-            return "okayyyy"
-        }
-
 
 
     </script>
