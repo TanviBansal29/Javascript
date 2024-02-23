@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <div id="output"></div>
+    <!-- <input type="button" onClick="start()" value="Start Game"> -->
+    <script>
+        const outsideFun = "outside";
+        myFun()
+
+        function myFun() {
+            const insideFun = "inside";
+            insideFun = "inside"; // now it will be added to global scope also bcoz we have simply declared it a variable 
+            console.log(outsideFun)
+            console.log(insideFun)
+        }
+        // const outsideFun = "hey" //(will throw error)
+        console.log(outsideFun)
+        console.log(insideFun) //cannot be accessed bcoz of instance execution context
+
+    </script>
+</body>
+
+</html>

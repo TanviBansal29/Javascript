@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    First: <input type="text" id="num1">
+    Second: <input type="text" id="num2">
+    <br>
+    <input type="button" onclick="addBy()" value="Add">
+    <input type="button" onclick="subBy()" value="Subtract">
+    <input type="button" onclick="mulBy()" value="Multiply">
+    <input type="button" onclick="divBy()" value="Divide">
+    <br>
+    <div id="output"></div>
+    <script>
+
+        let output = document.getElementById("output");
+
+        function makeMessage(s1, s2, callback) {
+            let result1 = callback(s1, s2);
+            output.innerHTML = result1;
+        }
+
+        makeMessage("hello", " world", function (s1, s2) {
+            let result2 = s1 + s2 + "worked";
+            return result2;
+        })
+
+    </script>
+</body>
+
+</html>
