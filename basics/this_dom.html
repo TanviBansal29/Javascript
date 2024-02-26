@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">Page 1</div>
+    <form name="myForm">
+
+        <input type="button" onClick="myFun(this)" value="Click 1">
+        <input type="button" onClick="myFun(this)" value="Click 2">
+        <input type="button" onClick="myFun(this)" value="Click 3">
+
+    </form>
+    <script>
+
+        var output = document.getElementById("wrapper");
+
+        function myFun(t){
+            console.log(t)
+            output.innerHTML = t.value;
+            t.value = "CLICKED"
+        }
+
+
+    </script>
+</body>
+</html>

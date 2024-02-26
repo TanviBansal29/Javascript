@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align:left;
+    margin-top: 50px;
+}
+#num {
+    padding: 5px;
+    font-size: 16px;
+}
+#output {
+    margin-top: 20px;
+    font-size: 18px;
+}
+input[type="button"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-style:italic;
+    background-color: #4CAF50;
+    color:white;
+    border: none;
+    cursor:crosshair;
+    border-radius: 5px;
+}
+input[type="button"]:hover {
+    background-color:blueviolet;
+}
