@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="myFun()">
+    <div id="wrapper">Page 1</div>
+    <form name="myForm">
+
+        <input type="button" id="id1" value="Click 1">
+        <input type="button" id="id2" value="Click 2">
+        <input type="button" id="id3" value="Click 3">
+
+    </form>
+    <script>
+
+        var output = document.getElementById("wrapper");
+
+        document.getElementById("id1").onclick = function(){
+            output.innerHTML = "WORKED";
+        }
+
+        document.getElementById("id1").onclick = myFun1;
+        
+        function myFun1(){
+            console.dir(this)
+            output.innerHTML = "WORKED";
+        }
+
+
+        function myFun(){
+            output.innerHTML = "WLECOME all loaded";
+        }
+      
+
+
+    </script>
+</body>
+</html>

@@ -16,10 +16,3 @@ dateTime()
 // setInterval(()=>{
 //     dateTime()
 // }, 1000)
-
-
-// let date = myDate.toDateString()
-// let time = myDate.toTimeString()
-
-// document.getElementById("date").innerHTML = date;
-// document.getElementById("time").innerHTML = time;
