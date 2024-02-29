@@ -30,24 +30,19 @@
         let holderItem;
 
         function dStart(){
-
             message("drag started");
             holderItem = event.target;
-
         }
 
         function nDrop(){
             event.preventDefault();
-
         }
 
         function dDrop(){
             event.preventDefault();
             message("Drop It");
             if(event.target.className=="box"){
-
                 event.target.appendChild(holderItem);
-
             }
         }
 

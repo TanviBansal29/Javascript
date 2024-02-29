@@ -1,27 +1,32 @@
 body {
     font-family: Arial, sans-serif;
-    text-align:left;
+    text-align:center;
     margin-top: 50px;
     background-color: rgb(159, 190, 239);
 }
 #num {
     padding: 5px;
-    font-size: 16px;
+    font-size: 20px;
 }
 #output {
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 30px;
+    color: red;
 }
 input[type="button"] {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 10px 40px;
+    font-size: 20px;
     font-style:italic;
     background-color: #4CAF50;
     color:white;
     border: none;
-    cursor:crosshair;
+    cursor:grab;
     border-radius: 5px;
 }
 input[type="button"]:hover {
     background-color:blueviolet;
+}
+
+input[type="text"]{
+    margin:1rem;
 }

@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>Complete JavaScript Course</title>
+    <style>
+        .box1 {
+            background-color: aqua;
+            font-size: 1.5em;
+            color: #fff;
+        }
+        
+        .box2 {
+            background-color: red;
+            font-size: 0.5em;
+            color: #ddd;
+        }
+        
+        #one,
+        #two,
+        #three {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            border: 1px solid black;
+        }
+        
+        .active {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="one" class="myClass">Box One</div>
+    <div id="two" class="myClass active">Box Two</div>
+    <div id="three" class="myClass">Box Three</div>
+    <script>
+        let el = document.querySelectorAll('.myClass');
+        for (let x = 0; x < el.length; x++) {
+            el[x].onclick = function () {
+                upClass(el, 'active', 'remove');
+                if (!this.classList.contains('active')) {
+                    this.classList.add('active');
+                }
+                //this.classList.toggle('box1');
+            }
+            //This loop iterates over each element in the el NodeList. For each element, it assigns an onclick event handler. 
+            //When clicked, it calls the upClass() function to remove the class active from all elements, 
+            //then adds the class active to the clicked element if it doesn't already have it.
+        }
+
+        function upClass(e, c, a) {
+            for (let x = 0; x < e.length; x++) {
+                e[x].classList[a](c);
+            }
+        }
+    </script>
+</body>
+
+</html>

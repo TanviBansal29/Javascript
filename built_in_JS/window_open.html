@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="message">WINDOW OPEN</div>
+    <input type="button" value="pop" onclick="popup()">
+    <script>
+
+        function popup(){
+            let url = "https://www.google.co.in/?id=1000";
+            let opt = "top=0, width=200"
+            window.open(url, "_blank", opt);
+        }
+
+        var a = 400;
+        var b = "Hello World";
+        var c = "https://www.google.co.in/?id=1000&n=500";
+        var d = "400";
+
+        var e = encodeURIComponent(c);
+        var f = decodeURIComponent(e);
+
+
+    </script>
+</body>
+</html>
