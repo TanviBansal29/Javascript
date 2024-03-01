@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="output">REGEX LEARNING</div>
+    <!-- <input type="button" onclick="myFun()" value="Click" /> -->
+    <input type="button" onclick="Validate()" value="Validate Inputs" />
+    <input type="text" id="email" value="email@gmail.com" />
+    <input type="text" id="num" value="1234242" />
+    <input type="text" id="cha" value="characters" />
+
+    <script>
+      var output = document.getElementById("output");
+      var str =
+        "dctg Javascript rjghjeh ergiwehg Javascript Javascript ehifuvhiugh 46817 347687316 0289324";
+
+      //   function myFun() {
+      //     // let p = /Javascript/;
+      //     // let p = /Javascript/i; //makes it case insensitive
+      //     // let p = /Javascript/g; // returns back all the matched patterns
+      //     let p = /Javascript/gi; //returns all case insensitive matches
+      //     let r = str.match(p);
+
+      //     console.log(r);
+      //     r.forEach(function (e) {
+      //       console.log("hi");
+      //       console.log(e);
+      //     });
+      //   }
+
+      function cEmail(e) {
+        var p = /([a-zA-Z0-9._]+@[a-zA-Z0-9._]+\.[a-zA-Z]+)/gi;
+        var r = e.match(p);
+        let t = r == null ? false : true;
+
+        return t;
+      }
+
+      function cNum(e) {
+        var p = /\D/;
+        var r = e.match(p);
+        let t = r == null ? true : false;
+
+        return t;
+      }
+
+      function cChar(e) {
+        var p = /[^a-zA-Z]/gi;
+        var r = e.match(p);
+        let t = r == null ? true : false;
+
+        return t;
+      }
+
+      function Validate() {
+        // e = document.getElementById("email").value;
+
+        // let p = /([a-zA-Z0-9._]+@[a-zA-Z0-9._]+\.[a-zA-Z]+)/gi;
+        // let r = e.match(p);
+        // let t = r == null ? false : true;
+        // console.log(t);
+        // return t;
+
+        console.log("hi");
+        let i = document.getElementsByTagName("input");
+        for (let x = 0; x < i.length; x++) {
+          console.log(i[x]);
+          if (i[x].type == "text") {
+            if ([i[x].id] == "email") {
+              //valid email
+              if (cEmail(i[x].value)) {
+                console.log("Email Valid");
+              } else {
+                console.log("Bad email");
+              }
+            }
+            if ([i[x].id] == "num") {
+              //valid num
+              if (cNum(i[x].value)) {
+                console.log("Number valid");
+              } else {
+                console.log("Number invalid");
+              }
+            }
+            if ([i[x].id] == "cha") {
+              //valid char
+              if (cChar(i[x].value)) {
+                console.log("Characters Valid");
+              } else {
+                console.log("Characters invalid");
+              }
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

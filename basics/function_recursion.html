@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="output">Recursive function calls</div>
+    <div id="test">
+      <div>First</div>
+      <div>Second</div>
+      <div>
+        Third
+        <div>
+          Four
+          <div>Five</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      cUp();
+      function cUp() {
+        var test = document.getElementById("test");
+        cNode(test);
+      }
+
+      function cNode(data) {
+        for (let x = 0; x < data.children.length; x++) {
+          let c = data.children[x];
+          sNode(c);
+          cNode(c);
+        }
+      }
+
+      function sNode(data) {
+        let bgColor = "#" + Math.random().toString(16).substr(-6);
+        console.log(bgColor);
+        console.log(typeof bgColor);
+        data.style.backgroundColor = bgColor;
+        data.classList.add("box");
+      }
+    </script>
+  </body>
+</html>
